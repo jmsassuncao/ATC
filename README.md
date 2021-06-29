@@ -1,6 +1,9 @@
+<p align="center">
+    ![Auto_terrain_classification](logo.png)
 
-![Auto_terrain_classification](logo.png)
-Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
+    Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
+</p>
+
 
 # Auto_terrain_classification
 
@@ -43,11 +46,13 @@ To operate it we need only to follow the instructions present in the plug-in its
 
 The final operation will reveal two images, the ground truth and the predicted image.
 In this example:
+
 ![Ground Truth](tutorial_images/RW5_ground.PNG)
 ![Predicted image](tutorial_images/RW5_predict.PNG)
 
 With the following labels:
-![Label](tutorial_images/Plugin_tutorial_image_6.PNG)
+
+![Label](tutorial_images/Plugin_tutorial_image_7.PNG)
 
 ## Files to edit
 The main files to edit, in which all the functioning parts are present, are:
