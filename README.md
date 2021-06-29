@@ -39,7 +39,7 @@ Done, the plug-in should now be installed and present in the **Plugins** tab.
 The main focus of the plug-in implementation was simplicity.
 To operate it we need only to follow the instructions present in the plug-in itself:
 
-![Plug-in UI](/Tutorial Images/Plugin_tutorial_image_6.PNG)
+![Plug-in UI](Plugin_tutorial_image_6.PNG)
 
 The final operation will reveal two images, the ground truth and the predicted image.
 In this example:
