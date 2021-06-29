@@ -1,5 +1,7 @@
 <p align="center">
-    <img src="logo.png" alt="Auto_terrain_classification" width="200"/>
+    
+    <img src="logo.png" alt="Auto_terrain_classification"/>
+    
     Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
 </p>
 
@@ -47,8 +49,9 @@ The final operation will reveal two images, the ground truth and the predicted i
 In this example:
 
 <p>
-    <img src="tutorial_images/RW5_ground.PNG" alt="Ground Truth" width="200"/>
-    <img src="tutorial_images/RW5_predict.PNG" alt="Predicted image" width="200"/>
+    <img src="tutorial_images/RW5_ground.PNG" alt="Ground Truth" width="400"/>
+    
+    <img src="tutorial_images/RW5_predict.PNG" alt="Predicted image" width="400"/>
 </p>
 
 ![Ground Truth](tutorial_images/RW5_ground.PNG)
