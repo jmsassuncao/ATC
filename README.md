@@ -1,6 +1,6 @@
 <p align="center">
     <img src="logo.png" alt="Auto_terrain_classification"/>
-    <h4 align="center">Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.</h4>
+    <h5 align="center">Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.</h5>
 </p>
 <br> <br> 
 
@@ -57,8 +57,8 @@ With the following labels:
 
 ## Files to edit
 The main files to edit, in which all the functioning parts are present, are:
-auto_terrain_classification.py
-auto_terrain_classification_crosshair.py
+* auto_terrain_classification.py
+* auto_terrain_classification_crosshair.py
 
 ## Notice (Important)
 
