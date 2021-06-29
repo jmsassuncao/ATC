@@ -19,7 +19,7 @@ First we're going to need a working QGIS environment, along with GDAL.
 
 After the QGIS environment has been installed, we need to resolve the plugin dependencies.
 The plugin utilizes, among other packages already present in the OSGeoShell, two external packages:
-[Scikit-learn](https://scikit-learn.org/stable/), used in the machine learning processes.
+[Scikit-learn](https://scikit-learn.org/stable/), used in the machine learning processes;
 [Sentinelsat](https://github.com/sentinelsat/sentinelsat), used in the retrieval of satellite imagery. 
 
 In order to install both dependencies, follow the next steps:
