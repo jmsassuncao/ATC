@@ -966,6 +966,7 @@ class AutoTerrainClassificationPlugin(object):
                 cloud_coverage = str(product['cloudcoverpercentage'])
                 size = str(product['size'])
                 on_demand = str(product['ondemand'])
+                product_available = str(api.is_online(product['uuid'].strip()))
                 QgsMessageLog.logMessage(pre_message_log + "File name to be downloaded: " + identifier,
                                          self.log_category, level=Qgis.Info)
                 
@@ -975,8 +976,9 @@ class AutoTerrainClassificationPlugin(object):
                                          self.log_category, level=Qgis.Info)
                 QgsMessageLog.logMessage(pre_message_log + "on demand: " + on_demand,
                                          self.log_category, level=Qgis.Info)
-         """
-
+                QgsMessageLog.logMessage(pre_message_log + "Is online: " + product_available,
+                                         self.log_category, level=Qgis.Info)
+        """
 
         # create the download task, fill it with the required information and link one signal
         # to update the progress bar. (task will be fed into the task manager at the end of the function)
@@ -1580,8 +1582,12 @@ class GetSentinelDataTask2(QgsTask):
             # Downloading procedure, try to download each file in order, if successful skip the rest, else try backup
             for index, product in product_list.iterrows():
 
-                # Download tile
-                self.api.download(product['uuid'].strip(), directory_path=self.path_to_sentinel_data[:-1])
+                # Download tile if online
+                if self.api.is_online(product['uuid'].strip()):
+                    self.api.download(product['uuid'].strip(), directory_path=self.path_to_sentinel_data[:-1])
+                else:
+                    QgsMessageLog.logMessage(self.pre_message_log + "Wanted file is offline, retrying.", self.log_category, level=Qgis.Info)
+                    continue
 
                 # Give some time to the file explorer to update the downloaded maps extension to zip (from the initial downloading state "incomplete")
                 time.sleep(3)
@@ -1746,7 +1752,7 @@ class ClassificationTask2(QgsTask):
 
         if len(zip_list) < 3:
             QgsMessageLog.logMessage(
-                self.pre_message_log + "Could not find 3 tiles in the download folder! Aborting classification process.", self.log_category, level=Qgis.Warning)
+                self.pre_message_log + "Could not find 3 tiles in the download folder! Likely a sentinel database error. Aborting classification process.", self.log_category, level=Qgis.Warning)
             return False
 
         QgsMessageLog.logMessage(
