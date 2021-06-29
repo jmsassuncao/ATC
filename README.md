@@ -16,8 +16,8 @@ To install the plugin follow the next steps:
 First we're going to need a working QGIS environment, along with GDAL.
 * Download and install OSGeo4W from the [QGIS directory](https://qgis.org/en/site/forusers/download.html)
 
-After the QGIS environment has been installed, we need to resolve the plug-in dependencies.
-The plug-in utilizes, among other packages already present in the OSGeoShell, two external packages:
+After the QGIS environment has been installed, we need to resolve the plugin dependencies.
+The plugin utilizes, among other packages already present in the OSGeoShell, two external packages:
 [Scikit-learn](https://scikit-learn.org/stable/), used in the machine learning processes.
 [Sentinelsat](https://github.com/sentinelsat/sentinelsat), used in the retrieval of satellite imagery. 
 
@@ -34,14 +34,14 @@ Next we just need to install the plugin:
     * Click on the **Plugins** tab and **Manage and Install Plugins...**
     * Click on **Install from ZIP** and select the downloaded repository folder.
 
-Done, the plug-in should now be installed and present in the **Plugins** tab.
+Done, the plugin should now be installed and present in the **Plugins** tab.
 
 ## User guide
 
-The main focus of the plug-in implementation was simplicity.
-To operate it we need only to follow the instructions present in the plug-in UI itself:
+The main focus of the plugin implementation was simplicity.
+To operate it we need only to follow the instructions present in the plugin UI itself:
 
-![Plug-in UI](tutorial_images/Plugin_tutorial_image_6.PNG)
+![Plugin UI](tutorial_images/Plugin_tutorial_image_6.PNG)
 
 The final operation will reveal two images, the ground truth and the predicted image.
 In this example:
@@ -64,7 +64,7 @@ The main files to edit, in which all the functioning parts are present, are:
 
 At the moment, issues related with the sentinel database has prevented the acquisition of older tiles (roughly 8 months) necessary for the classification procedure. 
 
-As it stands, the plug-in will not function correctly. 
+As it stands, the plugin will not function correctly. 
 
 Waiting for sentinel infrastructure fix.
 
