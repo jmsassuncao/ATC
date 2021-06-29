@@ -5,7 +5,7 @@
 <p align="center">
     Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
 </p>
-    
+    <h1 align="center">Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.</h1>
 
 # Auto_terrain_classification
 
