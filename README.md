@@ -13,6 +13,7 @@ The following experimental plugin was created in the sequence of a master thesis
 
 ## Quick Start
 To install the plugin follow the next steps:
+
 First we're going to need a working QGIS environment, along with GDAL.
 * Download and install OSGeo4W from the [QGIS directory](https://qgis.org/en/site/forusers/download.html)
 
