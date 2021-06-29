@@ -1,6 +1,5 @@
 <p align="center">
-    ![Auto_terrain_classification](logo.png)
-
+    <img src="logo.png" alt="Auto_terrain_classification" width="200"/>
     Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
 </p>
 
