@@ -46,6 +46,11 @@ To operate it we need only to follow the instructions present in the plug-in its
 The final operation will reveal two images, the ground truth and the predicted image.
 In this example:
 
+<p>
+    <img src="tutorial_images/RW5_ground.PNG" alt="Ground Truth" width="200"/>
+    <img src="tutorial_images/RW5_predict.PNG" alt="Predicted image" width="200"/>
+</p>
+
 ![Ground Truth](tutorial_images/RW5_ground.PNG)
 ![Predicted image](tutorial_images/RW5_predict.PNG)
 
