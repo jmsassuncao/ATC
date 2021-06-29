@@ -1,9 +1,7 @@
 <p align="center">
-    
     <img src="logo.png" alt="Auto_terrain_classification"/>
     
-    Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
-    
+    echo "Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.<br>";
 </p>
 
 
@@ -42,7 +40,7 @@ Done, the plug-in should now be installed and present in the **Plugins** tab.
 ## User guide
 
 The main focus of the plug-in implementation was simplicity.
-To operate it we need only to follow the instructions present in the plug-in itself:
+To operate it we need only to follow the instructions present in the plug-in UI itself:
 
 ![Plug-in UI](tutorial_images/Plugin_tutorial_image_6.PNG)
 
