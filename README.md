@@ -1,7 +1,6 @@
 <p align="center">
     <img src="logo.png" alt="Auto_terrain_classification"/>
-    
-    echo "Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.<br>";
+    Experimental automatic terrain classification plugin for Qgis, intended for land use and land cover applications.
 </p>
 
 
