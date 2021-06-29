@@ -39,15 +39,15 @@ Done, the plug-in should now be installed and present in the **Plugins** tab.
 The main focus of the plug-in implementation was simplicity.
 To operate it we need only to follow the instructions present in the plug-in itself:
 
-![Plug-in UI](Tutorial Images/Plugin_tutorial_image_6.png)
+![Plug-in UI](/Tutorial Images/Plugin_tutorial_image_6.png)
 
 The final operation will reveal two images, the ground truth and the predicted image.
 In this example:
-![Ground Truth](Tutorial Images/RW5_ground.png)
-![Predicted image](Tutorial Images/RW5_predict.png)
+![Ground Truth](/Tutorial Images/RW5_ground.png)
+![Predicted image](/Tutorial Images/RW5_predict.png)
 
 With the following labels:
-![Label](Tutorial Images/Plugin_tutorial_image_6.png)
+![Label](/Tutorial Images/Plugin_tutorial_image_6.png)
 
 ## Files to edit
 The main files to edit, in which all the functioning parts are present, are:
