@@ -1,0 +1,6 @@
+Packages dependencies:
+Open OSGeoShell
+type:
+py3_env
+pip install sklearn
+pip install sentinelsat

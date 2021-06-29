@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-auto_terrain_classification",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Folder with the original pre downloaded tiles used in the creation of the training dataset
