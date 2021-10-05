@@ -41,16 +41,21 @@ Done, the plugin should now be installed and present in the **Plugins** tab.
 I've initialized the plug-in before installing the required packages, got an error, and even after installing the required packages, the plugin still show the same error.
 * This problem happens when the plugin has not been properly restarted, to fix the error:
     * Download the plugin "Plugin Reloader" from the QGIS **plugin** tab **Manage and Install Plugins...***
-    * Select the ATC plugin in the **Configure** sub tab, and reload the ATC plugin.
+    * Select the ATC plugin in the **Configure** subtab, and reload the ATC plugin.
 
-![Plugin Reloader](tutorial_images/Plugin_reloader.PNG)
+<p>
+    <img src="tutorial_images/Plugin_reloader.PNG" alt="Plugin Reloader" width="500"/>
+</p>
 
 ## User guide
 
 The main focus of the plugin implementation was simplicity.
 To operate it we need only to follow the instructions present in the plugin UI itself, and choose your area's coordinate system in the QGIS interface:
 
-![Plugin UI](tutorial_images/Plugin_tutorial_image_6.PNG)
+<p>
+    <img src="tutorial_images/Plugin_tutorial_image_6.PNG" alt="Plugin UI" width="500"/>
+</p>
+
 
 The final operation will reveal two images, the ground truth and the predicted image.
 In this example:
