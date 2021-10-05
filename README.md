@@ -50,7 +50,7 @@ I've initialized the plug-in before installing the required packages, got an err
 ## User guide
 
 The main focus of the plugin implementation was simplicity.
-To operate it we need only to follow the instructions present in the plugin UI itself, and choose your area's coordinate system in the QGIS interface:
+To operate it we need only to choose the intended area's coordinate system in the QGIS interface, and follow the instructions present in the plugin UI itself:
 
 <p>
     <img src="tutorial_images/Plugin_tutorial_image_6.PNG" alt="Plugin UI" width="500"/>
