@@ -2015,6 +2015,14 @@ class ClassificationTask2(QgsTask):
         # although unlikely, could try deepcopy to prevent cascade effect in the mask application
         prediction_final_matrix = np.reshape(prediction_final, (self.height_in_pixels, self.length_in_pixels))
 
+        # use the following line if you want to use any of the indexes by themselfs to draw a tile, also need to switch line 2060 of code
+        """
+        NVDI_array = np.array(NDVI_index)
+        NVDI_array = NVDI_array*(250/max(NVDI_array))
+        NVDI_array_final = NVDI_array.astype(int)
+        index_final_matrix = np.reshape(NVDI_array_final, (self.height_in_pixels, self.length_in_pixels))
+        """
+
         # apply mask to replace every enclosed pixel (different from everyone around it) to the value
         # of the majority of the pixels around it
         # this is done to reduce "salt and pepper effect" of per-pixel classification. To prevent out of bounds, the
@@ -2049,9 +2057,13 @@ class ClassificationTask2(QgsTask):
         ds_prediction = driver.Create(path_to_prediction_raster, xsize=self.length_in_pixels,
                                       ysize=self.height_in_pixels, bands=1, eType=gdal.GDT_Byte)
         ds_prediction.GetRasterBand(1).WriteArray(prediction_final_matrix)
+        #switch the next line with the previous if you want to use any of the indexs by themselfs, rest in line 2018 of code
+        #ds_prediction.GetRasterBand(1).WriteArray(index_final_matrix)
         ds_prediction.SetGeoTransform(prev_layer_geotransform)
         srs_prediction = osr.SpatialReference(wkt=prev_layer_projection)
         ds_prediction.SetProjection(srs_prediction.ExportToWkt())
+
+
 
         # close datasources (from previous layers and from the new prediction layer)
         ds = None
