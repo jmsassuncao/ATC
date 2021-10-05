@@ -37,10 +37,18 @@ Next we just need to install the plugin:
 
 Done, the plugin should now be installed and present in the **Plugins** tab.
 
+## FAQ
+I've initialized the plug-in before installing the required packages, got an error, and even after installing the required packages, the plugin still show the same error.
+* This problem happens when the plugin has not been properly restarted, to fix the error:
+    * Download the plugin "Plugin Reloader" from the QGIS **plugin** tab **Manage and Install Plugins...***
+    * Select the ATC plugin in the **Configure** sub tab, and reload the ATC plugin.
+
+![Plugin Reloader](tutorial_images/Plugin_reloader.PNG)
+
 ## User guide
 
 The main focus of the plugin implementation was simplicity.
-To operate it we need only to follow the instructions present in the plugin UI itself:
+To operate it we need only to follow the instructions present in the plugin UI itself, and choose your area's coordinate system in the QGIS interface:
 
 ![Plugin UI](tutorial_images/Plugin_tutorial_image_6.PNG)
 
