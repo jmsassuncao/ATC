@@ -129,16 +129,10 @@ class AutoTerrainClassificationPlugin(object):
         self.provider = None
         self.iface = iface
 
-        # set coordinate Reference system on transform and canvas (redundant)
-        # self.crs = QgsCoordinateReferenceSystem.fromEpsgId(3763) # initially focused on Portugal
+        # set coordinate Reference system on transform and canvas
         self.crs = self.iface.mapCanvas().mapSettings().destinationCrs()
-        self.iface.mapCanvas().mapSettings().setDestinationCrs(self.crs)
         self.transform = QgsCoordinateTransform()
-        self.transform.setDestinationCrs(self.crs)
-        self.transform.setSourceCrs(self.iface.mapCanvas().mapSettings().destinationCrs())
         self.transform_wgs84 = QgsCoordinateTransform()
-        self.transform_wgs84.setDestinationCrs(QgsCoordinateReferenceSystem("EPSG:4326"))
-        self.transform_wgs84.setSourceCrs(self.crs)
 
         # Create map tool and assign mouse click
         self.mapTool = GetCoordinateCrossHair(self.iface.mapCanvas())
@@ -267,6 +261,14 @@ class AutoTerrainClassificationPlugin(object):
             self.dlg.pushButton_fullRun.clicked.connect(self.fullRun)
             self.dlg.mQgsFileWidget_rasterFileLocation.setFilter("*.tif")
             self.dlg.mQgsFileWidget_rasterFileLocation.setDefaultRoot(self.path_to_aux_layer[:-1])
+
+        # set coordinate Reference system on transform and canvas (required), prevents the need to reload the plug-in
+        self.crs = self.iface.mapCanvas().mapSettings().destinationCrs()
+        self.iface.mapCanvas().mapSettings().setDestinationCrs(self.crs)
+        self.transform.setDestinationCrs(self.crs)
+        self.transform.setSourceCrs(self.iface.mapCanvas().mapSettings().destinationCrs())
+        self.transform_wgs84.setDestinationCrs(QgsCoordinateReferenceSystem("EPSG:4326"))
+        self.transform_wgs84.setSourceCrs(self.crs)
 
         self.dlg.show()
 
@@ -1841,6 +1843,8 @@ class ClassificationTask2(QgsTask):
 
             # run processing
             runAlgs.runAlgorithm('gdal:warpreproject', params)
+
+
 
             # jump the last run (37) to prevent the ground truth image from being extracted into full_list in the next process
             if i == 37:
