@@ -146,7 +146,7 @@ class AutoTerrainClassificationPlugin(object):
         self.path_to_dataframe_layer = cmd_folder.replace("\\", "/") + "/files/dataframes_layers/"
         self.path_to_training_images = cmd_folder.replace("\\", "/") + "/files/training_images/"
         self.path_to_trained_algorithms = cmd_folder.replace("\\", "/") + "/files/trained_algorithms/"
-        self.path_to_sentinel_data = cmd_folder.replace("\\", "/") + "/files/sentinel_data/"
+        self.path_to_sentinel_data = cmd_folder.replace("\\", "/") + "/files/senti/" #sentinel_data was necessary to reduce the path in light of windows max 260 path caracters
         self.path_to_resources = cmd_folder.replace("\\", "/") + "/files/Resources/"
 
         # initialize active layer as None
@@ -1530,7 +1530,7 @@ class GetSentinelDataTask2(QgsTask):
         self.exception = None
         self.log_category = "ATC Log"
         self.pre_message_log = "[GetSentinelDataTask]: "
-        self.path_to_sentinel_data = cmd_folder.replace("\\", "/") + "/files/sentinel_data/"
+        self.path_to_sentinel_data = cmd_folder.replace("\\", "/") + "/files/senti/"
         self.iface = None
         self.log_category = None
         self.multi_temporal_product_list = None
