@@ -40,7 +40,7 @@ Done, the plugin should now be installed and present in the **Plugins** tab.
 ## FAQ
 I've initialized the plug-in before installing the required packages, got an error, and even after installing the required packages, the plugin still show the same error.
 * This problem happens when the plugin has not been properly restarted, to fix the error:
-    * Download the plugin "Plugin Reloader" from the QGIS **plugin** tab **Manage and Install Plugins...***
+    * Download the plugin "Plugin Reloader" from the QGIS **plugin** tab **Manage and Install Plugins...**
     * Select the ATC plugin in the **Configure** subtab, and reload the ATC plugin.
 
 <p>
